@@ -28,34 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lUsername = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CarRentApp.Properties.Resources.uhUx4m;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(442, 279);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lUsername
             // 
             this.lUsername.AutoSize = true;
             this.lUsername.BackColor = System.Drawing.SystemColors.Window;
-            this.lUsername.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lUsername.Location = new System.Drawing.Point(12, 328);
             this.lUsername.Name = "lUsername";
-            this.lUsername.Size = new System.Drawing.Size(57, 15);
+            this.lUsername.Size = new System.Drawing.Size(55, 13);
             this.lUsername.TabIndex = 1;
             this.lUsername.Text = "Username";
             // 
@@ -108,6 +97,16 @@
             this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = " ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CarRentApp.Properties.Resources.uhUx4m;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(442, 279);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 

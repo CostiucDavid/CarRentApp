@@ -16,6 +16,7 @@ namespace CarRentApp
         {
             InitializeComponent();
             lPassword.BackColor = System.Drawing.Color.Transparent;
+            lUsername.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -27,7 +28,11 @@ namespace CarRentApp
         {
            
 
-            MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
+            //MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
+
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
         }
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         { 
