@@ -12,9 +12,20 @@ namespace CarRentApp
 {
     public partial class MainWindow : Form
     {
+        private LoginForm _login;
+        public string roleName;
+        public string user;
         public MainWindow()
         {
             InitializeComponent();
+        } 
+        public MainWindow(LoginForm login,  string user)
+        {
+            InitializeComponent();
+           _login = login;
+            this.user = user;
+            roleName = "Admin"; // Get role from user
+            MessageBox.Show(this.user + "" + roleName);
         }
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)

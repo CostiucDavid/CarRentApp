@@ -36,12 +36,13 @@ namespace CarRentApp
                 var user = "David";
                 if (user == null)
                 {
-                    MessageBox.Show("please provide bvalid credentials");
+                    MessageBox.Show("please provide valid credentials");
 
                 }
                 else
                 {
-                    var mainWindow = new MainWindow();
+
+                    var mainWindow = new MainWindow(this, user);
                     mainWindow.Show();
                     this.Hide();
                 }
