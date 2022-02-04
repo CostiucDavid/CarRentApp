@@ -32,8 +32,8 @@
             this.btAddNewUser = new System.Windows.Forms.Button();
             this.btResetPassword = new System.Windows.Forms.Button();
             this.btActivateDeactivate = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvUserList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.SuspendLayout();
             // 
             // btRefresh
@@ -65,6 +65,7 @@
             this.btResetPassword.TabIndex = 2;
             this.btResetPassword.Text = "Reset password";
             this.btResetPassword.UseVisualStyleBackColor = true;
+            this.btResetPassword.Click += new System.EventHandler(this.btResetPassword_Click);
             // 
             // btActivateDeactivate
             // 
@@ -76,27 +77,27 @@
             this.btActivateDeactivate.Text = "Activate / Deactivate";
             this.btActivateDeactivate.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvUserList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1119, 346);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserList.Location = new System.Drawing.Point(0, 52);
+            this.dgvUserList.Name = "dgvUserList";
+            this.dgvUserList.Size = new System.Drawing.Size(1119, 346);
+            this.dgvUserList.TabIndex = 4;
             // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUserList);
             this.Controls.Add(this.btActivateDeactivate);
             this.Controls.Add(this.btResetPassword);
             this.Controls.Add(this.btAddNewUser);
             this.Controls.Add(this.btRefresh);
             this.Name = "ManageUsers";
             this.Text = "ManageUsers";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,6 +108,6 @@
         private System.Windows.Forms.Button btAddNewUser;
         private System.Windows.Forms.Button btResetPassword;
         private System.Windows.Forms.Button btActivateDeactivate;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUserList;
     }
 }
