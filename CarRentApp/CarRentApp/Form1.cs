@@ -26,14 +26,31 @@ namespace CarRentApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
 
-            //MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
-            MessageBox.Show(Utils.HashPassword(tbUsername.Text) + " " + tbPassword.Text);
+            try
+            {
+                var name = tbUsername.Text;
+                var password = tbPassword.Text;
+                var hashPassword = Utils.HashPassword(password);
+                //check for matching username, passwoed and active flag
+                var user = "David";
+                if (user == null)
+                {
+                    MessageBox.Show("please provide bvalid credentials");
 
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Hide();
+                }
+                else
+                {
+                    var mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error, please try again, in 5 min :)");
+                throw;
+            }
         }
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         { 
