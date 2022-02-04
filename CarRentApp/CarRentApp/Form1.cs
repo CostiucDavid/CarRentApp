@@ -15,6 +15,7 @@ namespace CarRentApp
         public LoginForm()
         {
             InitializeComponent();
+            lPassword.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -26,23 +27,42 @@ namespace CarRentApp
         {
            
 
-            //MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
+            MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
         }
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         { 
+            if (string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
+            {
+                MessageBox.Show("Please fill form");
+            }
+            else
+            { 
+                btnLogin.Enabled = true;
+                btnLogin.Select();
+            }
+          
+
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(tbUsername.Text))
             {
-                MessageBox.Show("Please fill username");
-                tbUsername.Select();
+                label1.Text = "Please fill username";
             }
-            if (string.IsNullOrEmpty(tbPassword.Text))
-            {
-                MessageBox.Show("Please fill password");
-                tbPassword.Select();
-            }
-           btnLogin.Enabled = true;
-           btnLogin.Select();
+        }
 
+        private void tbPassword_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
+            {
+                label1.Text = "";
+            }
+            else
+            {
+                btnLogin.Enabled = true;
+                btnLogin.Select();
+            }
         }
     }
 }
