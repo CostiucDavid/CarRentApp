@@ -2,7 +2,7 @@
 
 namespace CarRentApp.Entities
 {
-    public class CerRentalRecord
+    public class CarRentalRecord
     {
         public int Id { get; set; }
         public string CustomerName { get; set; }
