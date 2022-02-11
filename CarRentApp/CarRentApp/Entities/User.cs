@@ -14,9 +14,10 @@ namespace CarRentApp.Entities
         public bool? IsActive { get; set; }
         public virtual ICollection<UserRole> UserRoles { get; set; }
 
-        public UserRole()
+        public User()
         {
             UserRoles = new HashSet<UserRole>();
+            
         }
     }
 }

@@ -69,19 +69,19 @@
             // addRentalToolStripMenuItem
             // 
             this.addRentalToolStripMenuItem.Name = "addRentalToolStripMenuItem";
-            this.addRentalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addRentalToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.addRentalToolStripMenuItem.Text = "Add Rental";
             // 
             // editRentalToolStripMenuItem
             // 
             this.editRentalToolStripMenuItem.Name = "editRentalToolStripMenuItem";
-            this.editRentalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editRentalToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.editRentalToolStripMenuItem.Text = "Edit Rental";
             // 
             // viewArhiveToolStripMenuItem
             // 
             this.viewArhiveToolStripMenuItem.Name = "viewArhiveToolStripMenuItem";
-            this.viewArhiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewArhiveToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.viewArhiveToolStripMenuItem.Text = "View Arhive";
             // 
             // manageUsersToolStripMenuItem
@@ -100,6 +100,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

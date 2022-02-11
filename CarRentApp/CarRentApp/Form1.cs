@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,14 +27,15 @@ namespace CarRentApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            var carRentDbContext = new CarRentDbContext();
             try
             {
-                var name = tbUsername.Text;
-                var password = tbPassword.Text;
-                var hashPassword = Utils.HashPassword(password);
-                //check for matching username, passwoed and active flag
-                var user = "David";
+                SHA256 sha = SHA256.Create();
+                string hashPassword = Utils.HashPassword(tbPassword.Text);
+
+                var UserName = tbUsername.Text.Trim();
+                var user = carRentDbContext.Users.FirstOrDefault(x => x.UserName == UserName && x.Password == hashPassword && x.IsActive == true);
+
                 if (user == null)
                 {
                     MessageBox.Show("please provide valid credentials");

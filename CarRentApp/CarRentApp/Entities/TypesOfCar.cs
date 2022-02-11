@@ -15,7 +15,7 @@ namespace CarRentApp.Entities
         public string LicensePlateNumber { get; set; }
         public int? Year { get; set; }
 
-        public virtual ICollection<CarRentalRecord> CerRentalRecord { get; set; }
+        public virtual ICollection<CarRentalRecord> CarRentalRecord { get; set; }
 
 
     }

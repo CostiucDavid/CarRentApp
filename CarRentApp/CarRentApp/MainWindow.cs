@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarRentApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,16 +15,16 @@ namespace CarRentApp
     {
         private LoginForm _login;
         public string roleName;
-        public string user;
+        public User user;
         public MainWindow()
         {
             InitializeComponent();
         } 
-        public MainWindow(LoginForm login,  string user)
+        public MainWindow(LoginForm loginForm,  User userModel)
         {
             InitializeComponent();
-           _login = login;
-            this.user = user;
+           _login = loginForm;
+            user = userModel;
             roleName = "Admin"; // Get role from user
             MessageBox.Show(this.user + "" + roleName);
         }
@@ -36,6 +37,11 @@ namespace CarRentApp
                 //manageUsers.MdiParent = this;
                 manageUsers.Show();
             }
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
