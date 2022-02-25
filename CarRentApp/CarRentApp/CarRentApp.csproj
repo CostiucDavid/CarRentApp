@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditRentalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditRentalForm.Designer.cs">
+      <DependentUpon>AddEditRentalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUserForm.Designer.cs">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarRentDbContext.cs" />
     <Compile Include="Entities\CarRentalRecord.cs" />
     <Compile Include="Entities\Role.cs" />
@@ -80,22 +92,34 @@
     <Compile Include="ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202202101936055_FirstMigration.cs" />
-    <Compile Include="Migrations\202202101936055_FirstMigration.designer.cs">
-      <DependentUpon>202202101936055_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202202110917095_FirstMigration.cs" />
+    <Compile Include="Migrations\202202110917095_FirstMigration.designer.cs">
+      <DependentUpon>202202110917095_FirstMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202202101951248_AddCars.cs" />
-    <Compile Include="Migrations\202202101951248_AddCars.designer.cs">
-      <DependentUpon>202202101951248_AddCars.cs</DependentUpon>
+    <Compile Include="Migrations\202202110918281_AddCars.cs" />
+    <Compile Include="Migrations\202202110918281_AddCars.designer.cs">
+      <DependentUpon>202202110918281_AddCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202202110659574_AddAdmin.cs" />
-    <Compile Include="Migrations\202202110659574_AddAdmin.designer.cs">
-      <DependentUpon>202202110659574_AddAdmin.cs</DependentUpon>
+    <Compile Include="Migrations\202202110920388_AddUser.cs" />
+    <Compile Include="Migrations\202202110920388_AddUser.designer.cs">
+      <DependentUpon>202202110920388_AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchArchiveForm.Designer.cs">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="AddEditRentalForm.resx">
+      <DependentUpon>AddEditRentalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUserForm.resx">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,14 +129,14 @@
     <EmbeddedResource Include="ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202101936055_FirstMigration.resx">
-      <DependentUpon>202202101936055_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202110917095_FirstMigration.resx">
+      <DependentUpon>202202110917095_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202101951248_AddCars.resx">
-      <DependentUpon>202202101951248_AddCars.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202110918281_AddCars.resx">
+      <DependentUpon>202202110918281_AddCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202110659574_AddAdmin.resx">
-      <DependentUpon>202202110659574_AddAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202110920388_AddUser.resx">
+      <DependentUpon>202202110920388_AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +148,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchArchiveForm.resx">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

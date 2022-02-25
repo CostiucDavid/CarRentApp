@@ -45,6 +45,7 @@
             this.btRefresh.TabIndex = 0;
             this.btRefresh.Text = "Refresh";
             this.btRefresh.UseVisualStyleBackColor = true;
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
             // 
             // btAddNewUser
             // 
@@ -55,6 +56,7 @@
             this.btAddNewUser.TabIndex = 1;
             this.btAddNewUser.Text = "Add new user";
             this.btAddNewUser.UseVisualStyleBackColor = true;
+            this.btAddNewUser.Click += new System.EventHandler(this.btAddNewUser_Click);
             // 
             // btResetPassword
             // 
@@ -76,6 +78,7 @@
             this.btActivateDeactivate.TabIndex = 3;
             this.btActivateDeactivate.Text = "Activate / Deactivate";
             this.btActivateDeactivate.UseVisualStyleBackColor = true;
+            this.btActivateDeactivate.Click += new System.EventHandler(this.btActivateDeactivate_Click);
             // 
             // dgvUserList
             // 
@@ -97,6 +100,7 @@
             this.Controls.Add(this.btRefresh);
             this.Name = "ManageUsers";
             this.Text = "ManageUsers";
+            this.Load += new System.EventHandler(this.ManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.ResumeLayout(false);
 

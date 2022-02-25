@@ -7,13 +7,13 @@ namespace CarRentApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddAdmin : IMigrationMetadata
+    public sealed partial class AddUser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAdmin));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUser));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202110659574_AddAdmin"; }
+            get { return "202202110920388_AddUser"; }
         }
         
         string IMigrationMetadata.Source

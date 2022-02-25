@@ -13,7 +13,7 @@ namespace CarRentApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202202101951248_AddCars"; }
+            get { return "202202110918281_AddCars"; }
         }
         
         string IMigrationMetadata.Source

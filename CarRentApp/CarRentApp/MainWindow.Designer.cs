@@ -35,7 +35,9 @@
             this.editRentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewArhiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvRentalRecord = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRentalRecord)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -69,20 +71,23 @@
             // addRentalToolStripMenuItem
             // 
             this.addRentalToolStripMenuItem.Name = "addRentalToolStripMenuItem";
-            this.addRentalToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.addRentalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addRentalToolStripMenuItem.Text = "Add Rental";
+            this.addRentalToolStripMenuItem.Click += new System.EventHandler(this.addRentalToolStripMenuItem_Click);
             // 
             // editRentalToolStripMenuItem
             // 
             this.editRentalToolStripMenuItem.Name = "editRentalToolStripMenuItem";
-            this.editRentalToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.editRentalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editRentalToolStripMenuItem.Text = "Edit Rental";
+            this.editRentalToolStripMenuItem.Click += new System.EventHandler(this.editRentalToolStripMenuItem_Click);
             // 
             // viewArhiveToolStripMenuItem
             // 
             this.viewArhiveToolStripMenuItem.Name = "viewArhiveToolStripMenuItem";
-            this.viewArhiveToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.viewArhiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewArhiveToolStripMenuItem.Text = "View Arhive";
+            this.viewArhiveToolStripMenuItem.Click += new System.EventHandler(this.viewArhiveToolStripMenuItem_Click);
             // 
             // manageUsersToolStripMenuItem
             // 
@@ -91,18 +96,28 @@
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
+            // dgvRentalRecord
+            // 
+            this.dgvRentalRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRentalRecord.Location = new System.Drawing.Point(12, 27);
+            this.dgvRentalRecord.Name = "dgvRentalRecord";
+            this.dgvRentalRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRentalRecord.Size = new System.Drawing.Size(720, 395);
+            this.dgvRentalRecord.TabIndex = 1;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvRentalRecord);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRentalRecord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem editRentalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewArhiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgvRentalRecord;
     }
 }

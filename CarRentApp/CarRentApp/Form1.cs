@@ -16,15 +16,8 @@ namespace CarRentApp
         public LoginForm()
         {
             InitializeComponent();
-            lPassword.BackColor = System.Drawing.Color.Transparent;
-            lUsername.BackColor = System.Drawing.Color.Transparent;
+            
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var carRentDbContext = new CarRentDbContext();
@@ -39,11 +32,9 @@ namespace CarRentApp
                 if (user == null)
                 {
                     MessageBox.Show("please provide valid credentials");
-
                 }
                 else
                 {
-
                     var mainWindow = new MainWindow(this, user);
                     mainWindow.Show();
                     this.Hide();
